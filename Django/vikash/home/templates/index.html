@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management Form</title>
+</head>
+<body>
+    <h2> <u>Product Form</u></h2>
+
+    {{n}}
+    <form method="POST" action="{% url "savedata" %}">
+        {% csrf_token %}
+       
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required><br><br>
+
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" required><br><br>
+
+        <label for="sku">SKU(Stock Keeping Unit):</label>
+        <input type="text" id="sku" name="sku" required><br><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required><br><br>
+
+        <button type="submit" style="font-size: 20px;">Submit</button>
+    </form>
+   
+</body>
+</html>
+
+
+<style>
+    body{
+    text-align: center;
+    font-size: 30px;
+    background-color: #f4e5ff;
+    }
+</style>
